@@ -7,6 +7,9 @@
     <meta name="description" content="Stay informed with the latest legal updates, legislative changes, and expert analysis on Bahrain and GCC law from Sahwan Law.">
     <meta name="keywords" content="Bahrain law updates, legal news, GCC legislation, commercial law, arbitration, employment law">
     <link rel="canonical" href="https://www.sahwanlaw.com/blog.html">
+    <link rel="alternate" hreflang="en" href="https://www.sahwanlaw.com/blog.html">
+    <link rel="alternate" hreflang="ar" href="https://www.sahwanlaw.com/ar/blog/">
+    <link rel="alternate" hreflang="x-default" href="https://www.sahwanlaw.com/blog.html">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Legal Insights & Updates | Sahwan Law">
     <meta property="og:description" content="Stay informed with the latest legal updates from Sahwan Law.">
@@ -30,6 +33,10 @@
         }
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .article-card.hidden { display: none; }
+        .filter-btn.active { background-color: #1a3a5c; color: white; }
+    </style>
 </head>
 <body class="bg-pearl font-sans text-navy antialiased">
     <!-- HEADER -->
@@ -44,13 +51,26 @@
             <a href="index.html#services" class="text-xs font-sans uppercase tracking-widest text-navy/60 hover:text-navy">Services</a>
             <a href="blog.html" class="text-xs font-sans uppercase tracking-widest text-gold">Insights</a>
             <a href="index.html#contact" class="text-xs font-sans uppercase tracking-widest text-navy/60 hover:text-navy">Contact</a>
+            <a href="ar/blog/" class="text-xs font-sans uppercase tracking-widest text-navy/60 hover:text-navy border border-navy/20 px-3 py-1.5 rounded">العربية</a>
           </nav>
+          <!-- Mobile menu button -->
+          <button class="md:hidden text-navy" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+          </button>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="hidden md:hidden pb-4">
+          <a href="index.html" class="block py-2 text-sm text-navy/60">Home</a>
+          <a href="index.html#services" class="block py-2 text-sm text-navy/60">Services</a>
+          <a href="blog.html" class="block py-2 text-sm text-gold">Insights</a>
+          <a href="index.html#contact" class="block py-2 text-sm text-navy/60">Contact</a>
+          <a href="ar/blog/" class="block py-2 text-sm text-navy/60">العربية</a>
         </div>
       </div>
     </header>
 
     <!-- HERO -->
-    <section class="pt-32 pb-16 bg-white border-b border-navy/5">
+    <section class="pt-32 pb-12 bg-white border-b border-navy/5">
       <div class="container mx-auto px-6 md:px-12">
         <span class="block text-xs font-medium uppercase tracking-[0.2em] text-gold mb-4">Intellectual Capital</span>
         <h1 class="font-serif text-5xl md:text-6xl text-navy mb-6">Legal Insights</h1>
@@ -58,98 +78,192 @@
       </div>
     </section>
 
-    <!-- ARTICLES -->
-    <main class="py-24">
+    <!-- MAIN CONTENT WITH SIDEBAR -->
+    <main class="py-16">
       <div class="container mx-auto px-6 md:px-12">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+        <div class="flex flex-col lg:flex-row gap-12">
+          
+          <!-- SIDEBAR -->
+          <aside class="lg:w-72 flex-shrink-0">
+            <div class="lg:sticky lg:top-28 space-y-8">
+              
+              <!-- Language Filter -->
+              <div class="bg-white p-6 border border-navy/5">
+                <h3 class="text-xs font-bold uppercase tracking-widest text-navy mb-4">Language</h3>
+                <div class="flex flex-wrap gap-2">
+                  <button onclick="filterByLang('all')" class="filter-btn lang-btn active text-xs px-4 py-2 border border-navy/20 hover:bg-navy hover:text-white transition-colors">All</button>
+                  <button onclick="filterByLang('en')" class="filter-btn lang-btn text-xs px-4 py-2 border border-navy/20 hover:bg-navy hover:text-white transition-colors">English</button>
+                  <button onclick="filterByLang('ar')" class="filter-btn lang-btn text-xs px-4 py-2 border border-navy/20 hover:bg-navy hover:text-white transition-colors">العربية</button>
+                </div>
+              </div>
 
-          <!-- NEW: Company Registration Bahrain -->
-          <a href="blog/company-registration-bahrain-sijilat.html" class="group bg-white p-8 lg:p-10 border border-navy/5 hover:border-gold/30 hover:shadow-lg transition-all duration-300">
-            <div class="flex items-center gap-3 mb-6">
-              <span class="text-[10px] uppercase tracking-widest font-bold px-3 py-1.5 rounded-sm bg-gold/10 text-gold">Corporate Formation</span>
-              <span class="text-sm text-navy/40">July 15, 2025</span>
-            </div>
-            <h2 class="font-serif text-2xl text-navy mb-4 group-hover:text-gold transition-colors leading-tight">Company Registration in Bahrain: Complete Sijilat Guide 2025</h2>
-            <p class="text-navy/50 font-light leading-relaxed mb-6">Step-by-step guide to registering a company in Bahrain through the Sijilat portal. Learn about WLL, SPC, branch registration, required documents, fees, timeline, and 100% foreign ownership options.</p>
-            <span class="text-xs font-medium uppercase tracking-widest text-navy flex items-center gap-2 group-hover:gap-4 transition-all">Read Article <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></span>
-          </a>
+              <!-- Content Type Filter -->
+              <div class="bg-white p-6 border border-navy/5">
+                <h3 class="text-xs font-bold uppercase tracking-widest text-navy mb-4">Content Type</h3>
+                <div class="flex flex-wrap gap-2">
+                  <button onclick="filterByType('all')" class="filter-btn type-btn active text-xs px-4 py-2 border border-navy/20 hover:bg-navy hover:text-white transition-colors">All</button>
+                  <button onclick="filterByType('guide')" class="filter-btn type-btn text-xs px-4 py-2 border border-navy/20 hover:bg-navy hover:text-white transition-colors">📚 Guides</button>
+                  <button onclick="filterByType('article')" class="filter-btn type-btn text-xs px-4 py-2 border border-navy/20 hover:bg-navy hover:text-white transition-colors">📄 Articles</button>
+                  <button onclick="filterByType('update')" class="filter-btn type-btn text-xs px-4 py-2 border border-navy/20 hover:bg-navy hover:text-white transition-colors">📢 Updates</button>
+                </div>
+              </div>
 
-          <!-- NEW: Debt Collection Bahrain -->
-          <a href="blog/debt-collection-bahrain.html" class="group bg-white p-8 lg:p-10 border border-navy/5 hover:border-gold/30 hover:shadow-lg transition-all duration-300">
-            <div class="flex items-center gap-3 mb-6">
-              <span class="text-[10px] uppercase tracking-widest font-bold px-3 py-1.5 rounded-sm bg-gold/10 text-gold">Debt Recovery</span>
-              <span class="text-sm text-navy/40">September 8, 2025</span>
-            </div>
-            <h2 class="font-serif text-2xl text-navy mb-4 group-hover:text-gold transition-colors leading-tight">Debt Collection in Bahrain: Legal Process and Procedures</h2>
-            <p class="text-navy/50 font-light leading-relaxed mb-6">Complete guide to debt collection in Bahrain. Learn about demand letters, court procedures, execution orders, bulk recovery for telecoms, and how to recover commercial debts effectively.</p>
-            <span class="text-xs font-medium uppercase tracking-widest text-navy flex items-center gap-2 group-hover:gap-4 transition-all">Read Article <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></span>
-          </a>
+              <!-- Practice Area Filter -->
+              <div class="bg-white p-6 border border-navy/5">
+                <h3 class="text-xs font-bold uppercase tracking-widest text-navy mb-4">Practice Area</h3>
+                <div class="flex flex-col gap-2">
+                  <button onclick="filterByTag('all')" class="filter-btn tag-btn active text-xs px-4 py-2 border border-navy/20 hover:bg-navy hover:text-white transition-colors text-left">All Areas</button>
+                  <button onclick="filterByTag('corporate')" class="filter-btn tag-btn text-xs px-4 py-2 border border-navy/20 hover:bg-navy hover:text-white transition-colors text-left">Corporate Formation</button>
+                  <button onclick="filterByTag('notarization')" class="filter-btn tag-btn text-xs px-4 py-2 border border-navy/20 hover:bg-navy hover:text-white transition-colors text-left">Notarization</button>
+                  <button onclick="filterByTag('debt')" class="filter-btn tag-btn text-xs px-4 py-2 border border-navy/20 hover:bg-navy hover:text-white transition-colors text-left">Debt Collection</button>
+                  <button onclick="filterByTag('arbitration')" class="filter-btn tag-btn text-xs px-4 py-2 border border-navy/20 hover:bg-navy hover:text-white transition-colors text-left">Arbitration</button>
+                  <button onclick="filterByTag('employment')" class="filter-btn tag-btn text-xs px-4 py-2 border border-navy/20 hover:bg-navy hover:text-white transition-colors text-left">Employment</button>
+                  <button onclick="filterByTag('commercial')" class="filter-btn tag-btn text-xs px-4 py-2 border border-navy/20 hover:bg-navy hover:text-white transition-colors text-left">Commercial Law</button>
+                  <button onclick="filterByTag('criminal')" class="filter-btn tag-btn text-xs px-4 py-2 border border-navy/20 hover:bg-navy hover:text-white transition-colors text-left">Criminal Law</button>
+                </div>
+              </div>
 
-          <!-- NEW: Arbitration Bahrain -->
-          <a href="blog/arbitration-bahrain.html" class="group bg-white p-8 lg:p-10 border border-navy/5 hover:border-gold/30 hover:shadow-lg transition-all duration-300">
-            <div class="flex items-center gap-3 mb-6">
-              <span class="text-[10px] uppercase tracking-widest font-bold px-3 py-1.5 rounded-sm bg-navy/10 text-navy/70">Dispute Resolution</span>
-              <span class="text-sm text-navy/40">October 22, 2025</span>
-            </div>
-            <h2 class="font-serif text-2xl text-navy mb-4 group-hover:text-gold transition-colors leading-tight">Arbitration in Bahrain: Why Choose Arbitration Over Litigation</h2>
-            <p class="text-navy/50 font-light leading-relaxed mb-6">Guide to commercial arbitration in Bahrain. Learn the advantages of arbitration, BCDR procedures, enforcement of awards under the New York Convention, and when arbitration is the right choice.</p>
-            <span class="text-xs font-medium uppercase tracking-widest text-navy flex items-center gap-2 group-hover:gap-4 transition-all">Read Article <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></span>
-          </a>
+              <!-- Clear Filters -->
+              <button onclick="clearFilters()" class="w-full text-xs font-medium uppercase tracking-widest text-navy/60 hover:text-gold py-2 transition-colors">
+                ✕ Clear All Filters
+              </button>
 
-          <!-- NEW: Notarization Bahrain -->
-          <a href="blog/notarization-bahrain.html" class="group bg-white p-8 lg:p-10 border border-navy/5 hover:border-gold/30 hover:shadow-lg transition-all duration-300">
-            <div class="flex items-center gap-3 mb-6">
-              <span class="text-[10px] uppercase tracking-widest font-bold px-3 py-1.5 rounded-sm bg-navy/10 text-navy/70">Legal Documentation</span>
-              <span class="text-sm text-navy/40">December 3, 2025</span>
             </div>
-            <h2 class="font-serif text-2xl text-navy mb-4 group-hover:text-gold transition-colors leading-tight">Notarization in Bahrain: What Documents Need to be Notarized</h2>
-            <p class="text-navy/50 font-light leading-relaxed mb-6">Complete guide to notarization in Bahrain. Learn which documents require notarization, the process, apostille requirements, translation needs, and virtual notarization services.</p>
-            <span class="text-xs font-medium uppercase tracking-widest text-navy flex items-center gap-2 group-hover:gap-4 transition-all">Read Article <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></span>
-          </a>
+          </aside>
 
-          <!-- Article 1: Cheque Regulations -->
-          <a href="blog/cheque-regulations-law-23-2025.html" class="group bg-white p-8 lg:p-10 border border-navy/5 hover:border-gold/30 hover:shadow-lg transition-all duration-300">
-            <div class="flex items-center gap-3 mb-6">
-              <span class="text-[10px] uppercase tracking-widest font-bold px-3 py-1.5 rounded-sm bg-gold/10 text-gold">Commercial Law</span>
-              <span class="text-sm text-navy/40">May 31, 2025</span>
+          <!-- ARTICLES GRID -->
+          <div class="flex-1">
+            <div class="flex items-center justify-between mb-8">
+              <p class="text-sm text-navy/60"><span id="articleCount">10</span> articles</p>
+              <div class="text-sm text-navy/40">Sorted by date</div>
             </div>
-            <h2 class="font-serif text-2xl text-navy mb-4 group-hover:text-gold transition-colors leading-tight">Bolstering Commercial Integrity: Major Overhaul of Cheque Regulations in Bahrain's Commercial Law (Law No. 23 of 2025)</h2>
-            <p class="text-navy/50 font-light leading-relaxed mb-6">Bahrain's Law No. (23) of 2025 significantly overhauls check regulations within its Commercial Law to bolster financial stability and commercial integrity. Key changes include mandating partial payment of checks when full funds are unavailable, making checks with insufficient funds directly enforceable executive instruments.</p>
-            <span class="text-xs font-medium uppercase tracking-widest text-navy flex items-center gap-2 group-hover:gap-4 transition-all">Read Article <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></span>
-          </a>
+            
+            <div id="articlesGrid" class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-          <!-- Article 2: Amiable Compositeur -->
-          <a href="blog/amiable-compositeur-arbitration.html" class="group bg-white p-8 lg:p-10 border border-navy/5 hover:border-gold/30 hover:shadow-lg transition-all duration-300">
-            <div class="flex items-center gap-3 mb-6">
-              <span class="text-[10px] uppercase tracking-widest font-bold px-3 py-1.5 rounded-sm bg-navy/10 text-navy/70">Arbitration</span>
-              <span class="text-sm text-navy/40">May 31, 2025</span>
-            </div>
-            <h2 class="font-serif text-2xl text-navy mb-4 group-hover:text-gold transition-colors leading-tight">The Amiable Compositeur in Bahraini Arbitration Law</h2>
-            <p class="text-navy/50 font-light leading-relaxed mb-6">Arbitration has become a strategic option for resolving commercial disputes in the Kingdom of Bahrain. At the heart of this flexibility lies the concept of the "amicable compositeur," a legal tool that allows the arbitrator to resolve disputes based on principles of justice and fairness, transcending the strict literal application of the law.</p>
-            <span class="text-xs font-medium uppercase tracking-widest text-navy flex items-center gap-2 group-hover:gap-4 transition-all">Read Article <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></span>
-          </a>
+              <!-- ARABIC GUIDES -->
+              <!-- Arabic: Sijilat Guide -->
+              <a href="ar/sijilat/" class="article-card group bg-white p-8 border border-navy/5 hover:border-gold/30 hover:shadow-lg transition-all duration-300" data-lang="ar" data-type="guide" data-tag="corporate" data-date="2025-01-23">
+                <div class="flex items-center gap-2 mb-4">
+                  <span class="text-[10px] uppercase tracking-widest font-bold px-2 py-1 rounded-sm bg-gold/20 text-gold">دليل شامل</span>
+                  <span class="text-[10px] px-2 py-1 rounded-sm bg-navy/5 text-navy/60">العربية</span>
+                  <span class="text-sm text-navy/40 ml-auto">Jan 2025</span>
+                </div>
+                <h2 class="font-serif text-xl text-navy mb-3 group-hover:text-gold transition-colors leading-tight">دليل تأسيس الشركات في البحرين الشامل 2025</h2>
+                <p class="text-navy/50 text-sm font-light leading-relaxed mb-4 line-clamp-3">كل ما تحتاج معرفته عن تسجيل شركة في البحرين عبر نظام سجلات: الأنواع، المتطلبات، الرسوم، والخطوات التفصيلية.</p>
+                <span class="text-xs font-medium uppercase tracking-widest text-navy flex items-center gap-2 group-hover:gap-4 transition-all">Read Guide <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></span>
+              </a>
 
-          <!-- Article 3: Alternative Sentencing -->
-          <a href="blog/alternative-sentencing-law-20-2025.html" class="group bg-white p-8 lg:p-10 border border-navy/5 hover:border-gold/30 hover:shadow-lg transition-all duration-300">
-            <div class="flex items-center gap-3 mb-6">
-              <span class="text-[10px] uppercase tracking-widest font-bold px-3 py-1.5 rounded-sm bg-navy/10 text-navy/70">Criminal Law</span>
-              <span class="text-sm text-navy/40">May 31, 2025</span>
-            </div>
-            <h2 class="font-serif text-2xl text-navy mb-4 group-hover:text-gold transition-colors leading-tight">Modernizing Justice: Bahrain Expands Alternative Sentencing with Law No. (20) of 2025</h2>
-            <p class="text-navy/50 font-light leading-relaxed mb-6">Bahrain's new Law No. (20) of 2025 significantly modernizes its justice system by expanding alternative penalties to imprisonment, focusing on offender rehabilitation and societal reintegration. New measures include electronic restrictions and mandatory presence at designated locations.</p>
-            <span class="text-xs font-medium uppercase tracking-widest text-navy flex items-center gap-2 group-hover:gap-4 transition-all">Read Article <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></span>
-          </a>
+              <!-- Arabic: Notary Guide -->
+              <a href="ar/notary/" class="article-card group bg-white p-8 border border-navy/5 hover:border-gold/30 hover:shadow-lg transition-all duration-300" data-lang="ar" data-type="guide" data-tag="notarization" data-date="2025-01-23">
+                <div class="flex items-center gap-2 mb-4">
+                  <span class="text-[10px] uppercase tracking-widest font-bold px-2 py-1 rounded-sm bg-gold/20 text-gold">دليل شامل</span>
+                  <span class="text-[10px] px-2 py-1 rounded-sm bg-navy/5 text-navy/60">العربية</span>
+                  <span class="text-sm text-navy/40 ml-auto">Jan 2025</span>
+                </div>
+                <h2 class="font-serif text-xl text-navy mb-3 group-hover:text-gold transition-colors leading-tight">دليل التوثيق والتصديق في البحرين الشامل 2025</h2>
+                <p class="text-navy/50 text-sm font-light leading-relaxed mb-4 line-clamp-3">كل ما تحتاج معرفته عن توثيق المستندات: كاتب العدل، التصديق، الأبوستيل، التوكيلات، والإجراءات.</p>
+                <span class="text-xs font-medium uppercase tracking-widest text-navy flex items-center gap-2 group-hover:gap-4 transition-all">Read Guide <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></span>
+              </a>
 
-          <!-- Article 4: Expat Employees -->
-          <a href="blog/expat-employees-mechanism.html" class="group bg-white p-8 lg:p-10 border border-navy/5 hover:border-gold/30 hover:shadow-lg transition-all duration-300">
-            <div class="flex items-center gap-3 mb-6">
-              <span class="text-[10px] uppercase tracking-widest font-bold px-3 py-1.5 rounded-sm bg-navy/10 text-navy/70">Employment</span>
-              <span class="text-sm text-navy/40">October 2, 2023</span>
+              <!-- ENGLISH ARTICLES -->
+              <!-- Notarization -->
+              <a href="blog/notarization-bahrain.html" class="article-card group bg-white p-8 border border-navy/5 hover:border-gold/30 hover:shadow-lg transition-all duration-300" data-lang="en" data-type="article" data-tag="notarization" data-date="2025-12-03">
+                <div class="flex items-center gap-2 mb-4">
+                  <span class="text-[10px] uppercase tracking-widest font-bold px-2 py-1 rounded-sm bg-navy/10 text-navy/70">Legal Documentation</span>
+                  <span class="text-sm text-navy/40 ml-auto">Dec 3, 2025</span>
+                </div>
+                <h2 class="font-serif text-xl text-navy mb-3 group-hover:text-gold transition-colors leading-tight">Notarization in Bahrain: What Documents Need to be Notarized</h2>
+                <p class="text-navy/50 text-sm font-light leading-relaxed mb-4 line-clamp-3">Complete guide to notarization in Bahrain. Learn which documents require notarization, the process, apostille requirements, and virtual notarization services.</p>
+                <span class="text-xs font-medium uppercase tracking-widest text-navy flex items-center gap-2 group-hover:gap-4 transition-all">Read Article <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></span>
+              </a>
+
+              <!-- Arbitration -->
+              <a href="blog/arbitration-bahrain.html" class="article-card group bg-white p-8 border border-navy/5 hover:border-gold/30 hover:shadow-lg transition-all duration-300" data-lang="en" data-type="article" data-tag="arbitration" data-date="2025-10-22">
+                <div class="flex items-center gap-2 mb-4">
+                  <span class="text-[10px] uppercase tracking-widest font-bold px-2 py-1 rounded-sm bg-navy/10 text-navy/70">Dispute Resolution</span>
+                  <span class="text-sm text-navy/40 ml-auto">Oct 22, 2025</span>
+                </div>
+                <h2 class="font-serif text-xl text-navy mb-3 group-hover:text-gold transition-colors leading-tight">Arbitration in Bahrain: Why Choose Arbitration Over Litigation</h2>
+                <p class="text-navy/50 text-sm font-light leading-relaxed mb-4 line-clamp-3">Guide to commercial arbitration in Bahrain. Learn the advantages of arbitration, BCDR procedures, and enforcement of awards under the New York Convention.</p>
+                <span class="text-xs font-medium uppercase tracking-widest text-navy flex items-center gap-2 group-hover:gap-4 transition-all">Read Article <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></span>
+              </a>
+
+              <!-- Debt Collection -->
+              <a href="blog/debt-collection-bahrain.html" class="article-card group bg-white p-8 border border-navy/5 hover:border-gold/30 hover:shadow-lg transition-all duration-300" data-lang="en" data-type="article" data-tag="debt" data-date="2025-09-08">
+                <div class="flex items-center gap-2 mb-4">
+                  <span class="text-[10px] uppercase tracking-widest font-bold px-2 py-1 rounded-sm bg-gold/10 text-gold">Debt Recovery</span>
+                  <span class="text-sm text-navy/40 ml-auto">Sep 8, 2025</span>
+                </div>
+                <h2 class="font-serif text-xl text-navy mb-3 group-hover:text-gold transition-colors leading-tight">Debt Collection in Bahrain: Legal Process and Procedures</h2>
+                <p class="text-navy/50 text-sm font-light leading-relaxed mb-4 line-clamp-3">Complete guide to debt collection in Bahrain. Learn about demand letters, court procedures, execution orders, and bulk recovery for telecoms.</p>
+                <span class="text-xs font-medium uppercase tracking-widest text-navy flex items-center gap-2 group-hover:gap-4 transition-all">Read Article <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></span>
+              </a>
+
+              <!-- Company Registration -->
+              <a href="blog/company-registration-bahrain-sijilat.html" class="article-card group bg-white p-8 border border-navy/5 hover:border-gold/30 hover:shadow-lg transition-all duration-300" data-lang="en" data-type="article" data-tag="corporate" data-date="2025-07-15">
+                <div class="flex items-center gap-2 mb-4">
+                  <span class="text-[10px] uppercase tracking-widest font-bold px-2 py-1 rounded-sm bg-gold/10 text-gold">Corporate Formation</span>
+                  <span class="text-sm text-navy/40 ml-auto">Jul 15, 2025</span>
+                </div>
+                <h2 class="font-serif text-xl text-navy mb-3 group-hover:text-gold transition-colors leading-tight">Company Registration in Bahrain: Complete Sijilat Guide 2025</h2>
+                <p class="text-navy/50 text-sm font-light leading-relaxed mb-4 line-clamp-3">Step-by-step guide to registering a company in Bahrain through Sijilat. Learn about WLL, branch registration, documents, fees, and foreign ownership.</p>
+                <span class="text-xs font-medium uppercase tracking-widest text-navy flex items-center gap-2 group-hover:gap-4 transition-all">Read Article <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></span>
+              </a>
+
+              <!-- Cheque Regulations -->
+              <a href="blog/cheque-regulations-law-23-2025.html" class="article-card group bg-white p-8 border border-navy/5 hover:border-gold/30 hover:shadow-lg transition-all duration-300" data-lang="en" data-type="update" data-tag="commercial" data-date="2025-05-31">
+                <div class="flex items-center gap-2 mb-4">
+                  <span class="text-[10px] uppercase tracking-widest font-bold px-2 py-1 rounded-sm bg-gold/10 text-gold">Commercial Law</span>
+                  <span class="text-[10px] px-2 py-1 rounded-sm bg-green-100 text-green-700">New Law</span>
+                  <span class="text-sm text-navy/40 ml-auto">May 31, 2025</span>
+                </div>
+                <h2 class="font-serif text-xl text-navy mb-3 group-hover:text-gold transition-colors leading-tight">Major Overhaul of Cheque Regulations (Law No. 23 of 2025)</h2>
+                <p class="text-navy/50 text-sm font-light leading-relaxed mb-4 line-clamp-3">Bahrain's Law No. (23) of 2025 significantly overhauls check regulations within its Commercial Law to bolster financial stability and commercial integrity.</p>
+                <span class="text-xs font-medium uppercase tracking-widest text-navy flex items-center gap-2 group-hover:gap-4 transition-all">Read Article <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></span>
+              </a>
+
+              <!-- Amiable Compositeur -->
+              <a href="blog/amiable-compositeur-arbitration.html" class="article-card group bg-white p-8 border border-navy/5 hover:border-gold/30 hover:shadow-lg transition-all duration-300" data-lang="en" data-type="article" data-tag="arbitration" data-date="2025-05-31">
+                <div class="flex items-center gap-2 mb-4">
+                  <span class="text-[10px] uppercase tracking-widest font-bold px-2 py-1 rounded-sm bg-navy/10 text-navy/70">Arbitration</span>
+                  <span class="text-sm text-navy/40 ml-auto">May 31, 2025</span>
+                </div>
+                <h2 class="font-serif text-xl text-navy mb-3 group-hover:text-gold transition-colors leading-tight">The Amiable Compositeur in Bahraini Arbitration Law</h2>
+                <p class="text-navy/50 text-sm font-light leading-relaxed mb-4 line-clamp-3">The concept of the "amicable compositeur" allows the arbitrator to resolve disputes based on principles of justice and fairness, transcending the strict literal application of the law.</p>
+                <span class="text-xs font-medium uppercase tracking-widest text-navy flex items-center gap-2 group-hover:gap-4 transition-all">Read Article <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></span>
+              </a>
+
+              <!-- Alternative Sentencing -->
+              <a href="blog/alternative-sentencing-law-20-2025.html" class="article-card group bg-white p-8 border border-navy/5 hover:border-gold/30 hover:shadow-lg transition-all duration-300" data-lang="en" data-type="update" data-tag="criminal" data-date="2025-05-31">
+                <div class="flex items-center gap-2 mb-4">
+                  <span class="text-[10px] uppercase tracking-widest font-bold px-2 py-1 rounded-sm bg-navy/10 text-navy/70">Criminal Law</span>
+                  <span class="text-[10px] px-2 py-1 rounded-sm bg-green-100 text-green-700">New Law</span>
+                  <span class="text-sm text-navy/40 ml-auto">May 31, 2025</span>
+                </div>
+                <h2 class="font-serif text-xl text-navy mb-3 group-hover:text-gold transition-colors leading-tight">Modernizing Justice: Bahrain Expands Alternative Sentencing (Law No. 20 of 2025)</h2>
+                <p class="text-navy/50 text-sm font-light leading-relaxed mb-4 line-clamp-3">Bahrain's new Law No. (20) of 2025 significantly modernizes its justice system by expanding alternative penalties to imprisonment, focusing on rehabilitation.</p>
+                <span class="text-xs font-medium uppercase tracking-widest text-navy flex items-center gap-2 group-hover:gap-4 transition-all">Read Article <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></span>
+              </a>
+
+              <!-- Expat Employees -->
+              <a href="blog/expat-employees-mechanism.html" class="article-card group bg-white p-8 border border-navy/5 hover:border-gold/30 hover:shadow-lg transition-all duration-300" data-lang="en" data-type="article" data-tag="employment" data-date="2023-10-02">
+                <div class="flex items-center gap-2 mb-4">
+                  <span class="text-[10px] uppercase tracking-widest font-bold px-2 py-1 rounded-sm bg-navy/10 text-navy/70">Employment</span>
+                  <span class="text-sm text-navy/40 ml-auto">Oct 2, 2023</span>
+                </div>
+                <h2 class="font-serif text-xl text-navy mb-3 group-hover:text-gold transition-colors leading-tight">Navigating the Mechanism of Bringing in Expat Employees from Abroad</h2>
+                <p class="text-navy/50 text-sm font-light leading-relaxed mb-4 line-clamp-3">This guide walks you through the step-by-step process of hiring expat employees in Bahrain, from work permits to visa requirements.</p>
+                <span class="text-xs font-medium uppercase tracking-widest text-navy flex items-center gap-2 group-hover:gap-4 transition-all">Read Article <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></span>
+              </a>
+
             </div>
-            <h2 class="font-serif text-2xl text-navy mb-4 group-hover:text-gold transition-colors leading-tight">Navigating the Mechanism of Bringing in Expat Employees from Abroad</h2>
-            <p class="text-navy/50 font-light leading-relaxed mb-6">Hiring the right people is essential for growing a business. As companies expand, the need for employees from abroad becomes crucial to meet the need of local talent shortages. This guide walks you through the step-by-step process of hiring expat employees in Bahrain.</p>
-            <span class="text-xs font-medium uppercase tracking-widest text-navy flex items-center gap-2 group-hover:gap-4 transition-all">Read Article <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></span>
-          </a>
+
+            <!-- No Results Message -->
+            <div id="noResults" class="hidden text-center py-16">
+              <p class="text-navy/40 text-lg">No articles match your filters.</p>
+              <button onclick="clearFilters()" class="mt-4 text-gold hover:underline">Clear filters</button>
+            </div>
+          </div>
 
         </div>
       </div>
@@ -191,5 +305,82 @@
         </div>
       </div>
     </footer>
+
+    <!-- FILTER SCRIPT -->
+    <script>
+      let currentLang = 'all';
+      let currentType = 'all';
+      let currentTag = 'all';
+
+      function filterByLang(lang) {
+        currentLang = lang;
+        updateActiveButton('lang-btn', lang);
+        applyFilters();
+      }
+
+      function filterByType(type) {
+        currentType = type;
+        updateActiveButton('type-btn', type);
+        applyFilters();
+      }
+
+      function filterByTag(tag) {
+        currentTag = tag;
+        updateActiveButton('tag-btn', tag);
+        applyFilters();
+      }
+
+      function updateActiveButton(className, value) {
+        document.querySelectorAll('.' + className).forEach(btn => {
+          btn.classList.remove('active');
+          if (btn.onclick.toString().includes("'" + value + "'")) {
+            btn.classList.add('active');
+          }
+        });
+      }
+
+      function applyFilters() {
+        const articles = document.querySelectorAll('.article-card');
+        let visibleCount = 0;
+
+        articles.forEach(article => {
+          const lang = article.dataset.lang;
+          const type = article.dataset.type;
+          const tag = article.dataset.tag;
+
+          const langMatch = currentLang === 'all' || lang === currentLang;
+          const typeMatch = currentType === 'all' || type === currentType;
+          const tagMatch = currentTag === 'all' || tag === currentTag;
+
+          if (langMatch && typeMatch && tagMatch) {
+            article.classList.remove('hidden');
+            visibleCount++;
+          } else {
+            article.classList.add('hidden');
+          }
+        });
+
+        document.getElementById('articleCount').textContent = visibleCount;
+        document.getElementById('noResults').classList.toggle('hidden', visibleCount > 0);
+      }
+
+      function clearFilters() {
+        currentLang = 'all';
+        currentType = 'all';
+        currentTag = 'all';
+        
+        document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+        document.querySelectorAll('.lang-btn')[0].classList.add('active');
+        document.querySelectorAll('.type-btn')[0].classList.add('active');
+        document.querySelectorAll('.tag-btn')[0].classList.add('active');
+        
+        applyFilters();
+      }
+
+      // Initialize count
+      document.addEventListener('DOMContentLoaded', () => {
+        document.getElementById('articleCount').textContent = document.querySelectorAll('.article-card').length;
+      });
+    </script>
 </body>
 </html>
