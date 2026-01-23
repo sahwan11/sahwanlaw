@@ -423,8 +423,67 @@
             <a href="ar/" class="text-[10px] font-medium uppercase tracking-[0.2em] px-3 py-2 border border-navy/20 text-navy/60 hover:text-gold hover:border-gold transition-colors duration-300">العربية</a>
           </div>
         </div>
+
+        <!-- Mobile: Language Toggle + Hamburger -->
+        <div class="flex lg:hidden items-center gap-3">
+          <a href="ar/" class="text-sm font-bold px-4 py-2 bg-gold/10 text-navy border border-gold/30 hover:bg-gold hover:text-white transition-colors duration-300 rounded">AR</a>
+          <button id="mobileMenuBtn" class="text-navy p-2 hover:text-gold transition-colors" aria-label="Open menu">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu Overlay -->
+      <div id="mobileMenu" class="fixed inset-0 bg-white z-40 transform -translate-x-full transition-transform duration-300 lg:hidden">
+        <div class="flex flex-col h-full">
+          <div class="flex items-center justify-between p-6 border-b border-navy/10">
+            <span class="font-serif text-xl text-navy">Sahwan Law</span>
+            <button id="mobileMenuClose" class="text-navy p-2 hover:text-gold transition-colors" aria-label="Close menu">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+          </div>
+          <nav class="flex-1 overflow-y-auto p-6">
+            <ul class="space-y-6">
+              <li><a href="#" class="block text-xl font-medium text-navy hover:text-gold transition-colors" onclick="closeMobileMenu()">Home</a></li>
+              <li><a href="#services" class="block text-xl font-medium text-navy hover:text-gold transition-colors" onclick="closeMobileMenu()">Services</a></li>
+              <li><a href="#legacy" class="block text-xl font-medium text-navy hover:text-gold transition-colors" onclick="closeMobileMenu()">About</a></li>
+              <li><a href="#insights" class="block text-xl font-medium text-navy hover:text-gold transition-colors" onclick="closeMobileMenu()">Insights</a></li>
+              <li><a href="knowledge.html" class="block text-xl font-medium text-navy hover:text-gold transition-colors" onclick="closeMobileMenu()">Knowledge</a></li>
+              <li><a href="#contact" class="block text-xl font-medium text-navy hover:text-gold transition-colors" onclick="closeMobileMenu()">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="p-6 border-t border-navy/10">
+            <a href="ar/" class="flex items-center justify-center gap-2 w-full py-4 bg-gold/10 text-navy border border-gold/30 hover:bg-gold hover:text-white transition-colors duration-300 rounded font-bold text-lg">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+              <span>العربية</span>
+            </a>
+          </div>
+        </div>
       </div>
     </nav>
+
+    <script>
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenuClose = document.getElementById('mobileMenuClose');
+      const mobileMenu = document.getElementById('mobileMenu');
+      
+      function openMobileMenu() {
+        mobileMenu.classList.remove('-translate-x-full');
+        document.body.style.overflow = 'hidden';
+      }
+      
+      function closeMobileMenu() {
+        mobileMenu.classList.add('-translate-x-full');
+        document.body.style.overflow = '';
+      }
+      
+      mobileMenuBtn.addEventListener('click', openMobileMenu);
+      mobileMenuClose.addEventListener('click', closeMobileMenu);
+    </script>
 
     <main class="flex-grow">
     <!-- HERO -->

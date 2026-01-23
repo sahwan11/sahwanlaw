@@ -399,32 +399,88 @@
 </head>
 <body class="min-h-screen bg-white text-navy font-sans selection:bg-navy selection:text-white">
     <!-- NAVBAR -->
-    <nav class="fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md py-4 shadow-sm border-b border-gray-100">
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md py-4 shadow-sm border-b border-gray-100">
       <div class="container mx-auto px-6 md:px-12 flex items-center justify-between">
-        <a href="#" class="flex items-center gap-4 relative z-50 group">
-            <img src="data:image/png;base64,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" alt="Sahwan Law - Leading Law Firm in Bahrain Since 1975 - Logo" class="h-14 md:h-16 w-auto object-contain">
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-4 relative z-50">
+          <span class="font-serif text-xl md:text-2xl text-navy">مكتب سهوان</span>
         </a>
+
+        <!-- Desktop Navigation -->
         <div class="hidden lg:flex items-center gap-10">
           <ul class="flex gap-8">
             <li><a href="#" class="text-xs font-sans uppercase tracking-widest text-navy font-medium py-2 relative">الرئيسية<span class="absolute bottom-0 right-0 h-px w-full bg-gold"></span></a></li>
             <li><a href="#services" class="text-xs font-sans uppercase tracking-widest text-navy/60 hover:text-navy py-2 relative group">خدماتنا<span class="absolute bottom-0 right-0 h-px bg-gold w-0 group-hover:w-full transition-all duration-300"></span></a></li>
             <li><a href="#legacy" class="text-xs font-sans uppercase tracking-widest text-navy/60 hover:text-navy py-2 relative group">من نحن<span class="absolute bottom-0 right-0 h-px bg-gold w-0 group-hover:w-full transition-all duration-300"></span></a></li>
-            <li><a href="#insights" class="text-xs font-sans uppercase tracking-widest text-navy/60 hover:text-navy py-2 relative group">الرؤى القانونية<span class="absolute bottom-0 right-0 h-px bg-gold w-0 group-hover:w-full transition-all duration-300"></span></a></li>
+            <li><a href="#insights" class="text-xs font-sans uppercase tracking-widest text-navy/60 hover:text-navy py-2 relative group">الرؤى<span class="absolute bottom-0 right-0 h-px bg-gold w-0 group-hover:w-full transition-all duration-300"></span></a></li>
             <li><a href="blog/" class="text-xs font-sans uppercase tracking-widest text-navy/60 hover:text-navy py-2 relative group">المعرفة<span class="absolute bottom-0 right-0 h-px bg-gold w-0 group-hover:w-full transition-all duration-300"></span></a></li>
-            <li><a href="#contact" class="text-xs font-sans uppercase tracking-widest text-navy/60 hover:text-navy py-2 relative group">الوظائف<span class="absolute bottom-0 right-0 h-px bg-gold w-0 group-hover:w-full transition-all duration-300"></span></a></li>
           </ul>
-          <div class="flex items-center gap-4">
-            <a href="https://sas-team.vercel.app" target="_blank" rel="noopener" class="text-navy/30 hover:text-gold transition-colors duration-300" title="Staff Portal">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+          <div class="flex items-center gap-3">
+            <a href="#contact" class="text-[10px] font-bold uppercase tracking-[0.2em] px-5 py-2.5 bg-navy text-white hover:bg-gold transition-colors duration-300">اتصل بنا</a>
+            <a href="../" class="text-sm font-bold px-4 py-2 bg-gold/10 text-navy border border-gold/30 hover:bg-gold hover:text-white transition-colors duration-300 rounded">EN</a>
+          </div>
+        </div>
+
+        <!-- Mobile: Language Toggle + Hamburger -->
+        <div class="flex lg:hidden items-center gap-3">
+          <a href="../" class="text-sm font-bold px-4 py-2 bg-gold/10 text-navy border border-gold/30 hover:bg-gold hover:text-white transition-colors duration-300 rounded">EN</a>
+          <button id="mobileMenuBtn" class="text-navy p-2 hover:text-gold transition-colors" aria-label="فتح القائمة">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu Overlay - RTL slides from right -->
+      <div id="mobileMenu" class="fixed inset-0 bg-white z-40 transform translate-x-full transition-transform duration-300 lg:hidden">
+        <div class="flex flex-col h-full">
+          <div class="flex items-center justify-between p-6 border-b border-navy/10">
+            <span class="font-serif text-xl text-navy">مكتب سهوان</span>
+            <button id="mobileMenuClose" class="text-navy p-2 hover:text-gold transition-colors" aria-label="إغلاق القائمة">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
               </svg>
+            </button>
+          </div>
+          <nav class="flex-1 overflow-y-auto p-6">
+            <ul class="space-y-6">
+              <li><a href="#" class="block text-xl font-medium text-navy hover:text-gold transition-colors" onclick="closeMobileMenu()">الرئيسية</a></li>
+              <li><a href="#services" class="block text-xl font-medium text-navy hover:text-gold transition-colors" onclick="closeMobileMenu()">خدماتنا</a></li>
+              <li><a href="#legacy" class="block text-xl font-medium text-navy hover:text-gold transition-colors" onclick="closeMobileMenu()">من نحن</a></li>
+              <li><a href="#insights" class="block text-xl font-medium text-navy hover:text-gold transition-colors" onclick="closeMobileMenu()">الرؤى القانونية</a></li>
+              <li><a href="blog/" class="block text-xl font-medium text-navy hover:text-gold transition-colors" onclick="closeMobileMenu()">المعرفة</a></li>
+              <li><a href="#contact" class="block text-xl font-medium text-navy hover:text-gold transition-colors" onclick="closeMobileMenu()">اتصل بنا</a></li>
+            </ul>
+          </nav>
+          <div class="p-6 border-t border-navy/10">
+            <a href="../" class="flex items-center justify-center gap-2 w-full py-4 bg-gold/10 text-navy border border-gold/30 hover:bg-gold hover:text-white transition-colors duration-300 rounded font-bold text-lg">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+              <span>English</span>
             </a>
-            <a href="#contact" class="text-[10px] font-bold uppercase tracking-[0.2em] px-6 py-3 bg-navy text-white hover:bg-gold transition-colors duration-300">اتصل بنا</a>
-            <a href="../" class="text-[10px] font-medium uppercase tracking-[0.2em] px-3 py-2 border border-navy/20 text-navy/60 hover:text-gold hover:border-gold transition-colors duration-300">English</a>
           </div>
         </div>
       </div>
     </nav>
+
+    <script>
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenuClose = document.getElementById('mobileMenuClose');
+      const mobileMenu = document.getElementById('mobileMenu');
+      
+      function openMobileMenu() {
+        mobileMenu.classList.remove('translate-x-full');
+        document.body.style.overflow = 'hidden';
+      }
+      
+      function closeMobileMenu() {
+        mobileMenu.classList.add('translate-x-full');
+        document.body.style.overflow = '';
+      }
+      
+      mobileMenuBtn.addEventListener('click', openMobileMenu);
+      mobileMenuClose.addEventListener('click', closeMobileMenu);
+    </script>
 
     <main class="flex-grow">
     <!-- HERO -->
