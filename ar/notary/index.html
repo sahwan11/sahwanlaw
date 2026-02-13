@@ -207,15 +207,61 @@
 </head>
 <body class="bg-white text-navy font-sans">
 
-    <!-- Quick Navigation -->
-    <nav class="bg-navy text-white py-3 sticky top-0 z-50">
-        <div class="container mx-auto px-6">
-            <div class="flex items-center justify-between">
-                <a href="/ar/" class="font-serif text-xl">مكتب سهوان</a>
-                <a href="/ar/" class="text-sm text-gold hover:text-white">← العودة للرئيسية</a>
-            </div>
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md py-4 shadow-sm border-b border-gray-100">
+      <div class="container mx-auto px-6 md:px-12 flex flex-row-reverse items-center justify-between">
+        <a href="../" class="flex items-center gap-4 relative z-50 group">
+            <img src="../../images/logo.png" alt="مكتب سهوان للمحاماة - شركة محاماة رائدة في البحرين منذ 1975" class="h-14 md:h-16 w-auto object-contain">
+        </a>
+        <div class="hidden lg:flex items-center gap-10">
+          <ul class="flex gap-8">
+            <li><a href="../" class="text-xs font-sans uppercase tracking-widest text-navy/60 hover:text-navy py-2 relative group">الرئيسية<span class="absolute bottom-0 left-0 h-px bg-gold w-0 group-hover:w-full transition-all duration-300"></span></a></li>
+            <li><a href="../#services" class="text-xs font-sans uppercase tracking-widest text-navy/60 hover:text-navy py-2 relative group">خدماتنا<span class="absolute bottom-0 left-0 h-px bg-gold w-0 group-hover:w-full transition-all duration-300"></span></a></li>
+            <li><a href="../#legacy" class="text-xs font-sans uppercase tracking-widest text-navy/60 hover:text-navy py-2 relative group">من نحن<span class="absolute bottom-0 left-0 h-px bg-gold w-0 group-hover:w-full transition-all duration-300"></span></a></li>
+            <li><a href="https://sijilat.sahwanlaw.vercel.app/" target="_blank" rel="noopener" class="text-xs font-sans uppercase tracking-widest text-navy/60 hover:text-navy py-2 relative group">سجلات<span class="absolute bottom-0 left-0 h-px bg-gold w-0 group-hover:w-full transition-all duration-300"></span></a></li>
+            <li><a href="../blog/" class="text-xs font-sans uppercase tracking-widest text-navy/60 hover:text-navy py-2 relative group">المعرفة<span class="absolute bottom-0 left-0 h-px bg-gold w-0 group-hover:w-full transition-all duration-300"></span></a></li>
+            <li><a href="../#contact" class="text-xs font-sans uppercase tracking-widest text-navy/60 hover:text-navy py-2 relative group">الوظائف<span class="absolute bottom-0 left-0 h-px bg-gold w-0 group-hover:w-full transition-all duration-300"></span></a></li>
+          </ul>
+          <div class="flex items-center gap-4">
+            <a href="https://sas-team.vercel.app" target="_blank" rel="noopener" class="text-navy/30 hover:text-gold transition-colors duration-300" title="بوابة الموظفين">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+              </svg>
+            </a>
+            <a href="../#contact" class="text-[10px] font-bold uppercase tracking-[0.2em] px-6 py-3 bg-navy text-white hover:bg-gold transition-colors duration-300">اتصل بنا</a>
+            <a href="../../" class="text-[10px] font-medium uppercase tracking-[0.2em] px-3 py-2 border border-navy/20 text-navy/60 hover:text-gold hover:border-gold transition-colors duration-300">English</a>
+          </div>
         </div>
+
+        <!-- Mobile: Language Toggle + Hamburger -->
+        <div class="flex items-center gap-4 lg:hidden">
+          <a href="../../" class="text-[10px] font-bold uppercase tracking-widest text-navy hover:text-gold border border-navy/20 px-2 py-1 rounded">EN</a>
+          <button id="mobile-menu-btn" class="text-navy focus:outline-none" aria-label="فتح القائمة">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu Dropdown -->
+      <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-full inset-x-0 top-full shadow-lg">
+        <ul class="flex flex-col p-6 space-y-4">
+          <li><a href="../" class="block text-sm font-medium text-navy/60 hover:text-navy">الرئيسية</a></li>
+          <li><a href="../#services" class="block text-sm font-medium text-navy/60 hover:text-navy">خدماتنا</a></li>
+          <li><a href="../#legacy" class="block text-sm font-medium text-navy/60 hover:text-navy">من نحن</a></li>
+          <li><a href="https://sijilat.sahwanlaw.vercel.app/" target="_blank" rel="noopener" class="block text-sm font-medium text-navy/60 hover:text-navy">سجلات</a></li>
+          <li><a href="../blog/" class="block text-sm font-medium text-navy/60 hover:text-navy">المعرفة</a></li>
+          <li><a href="../#contact" class="block text-sm font-medium text-navy/60 hover:text-navy">اتصل بنا</a></li>
+        </ul>
+      </div>
     </nav>
+
+    <script>
+      const mBtn = document.getElementById('mobile-menu-btn');
+      const mMenu = document.getElementById('mobile-menu');
+      mBtn.addEventListener('click', () => { mMenu.classList.toggle('hidden'); });
+    </script>
 
     <main class="container mx-auto px-6 py-12 max-w-4xl">
         
