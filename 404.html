@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Page Not Found - Sahwan Law</title>
+<script>
+(function() {
+  var path = window.location.pathname.toLowerCase();
+  var host = 'https://www.sahwanlaw.com';
+
+  // Old Webflow blog posts → knowledge hub
+  if (path.indexOf('/post/') === 0 || path === '/post') {
+    window.location.replace(host + '/knowledge.html');
+    return;
+  }
+
+  // Old Webflow lawyer template pages (not abdulla-sahwan)
+  if (path.indexOf('/lawyer/') === 0 && path.indexOf('/lawyer/abdulla-sahwan') !== 0) {
+    window.location.replace(host + '/');
+    return;
+  }
+
+  // Old Webflow template pages
+  var simpleRedirects = {
+    '/style-guide': '/',
+    '/testimonial': '/',
+    '/about-us': '/',
+    '/home': '/',
+    '/home/': '/'
+  };
+
+  var clean = path.replace(/\/$/, '') || '/';
+  if (simpleRedirects[clean]) {
+    window.location.replace(host + simpleRedirects[clean]);
+    return;
+  }
+})();
+</script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: #0f172a;
+    color: #e2e8f0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+  }
+  .container { max-width: 480px; }
+  h1 { font-size: 5rem; font-weight: 800; color: #C5A028; line-height: 1; margin-bottom: 0.5rem; }
+  h2 { font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem; }
+  p { color: #94a3b8; margin-bottom: 2rem; font-size: 0.95rem; line-height: 1.6; }
+  a {
+    display: inline-block;
+    background: #C5A028;
+    color: #0f172a;
+    padding: 0.75rem 2rem;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    transition: background 0.2s;
+  }
+  a:hover { background: #d4af37; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>404</h1>
+  <h2>Page Not Found</h2>
+  <p>The page you're looking for may have been moved or no longer exists.</p>
+  <a href="https://www.sahwanlaw.com/">Back to Home</a>
+</div>
+</body>
+</html>
