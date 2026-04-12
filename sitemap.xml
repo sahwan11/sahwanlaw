@@ -80,8 +80,20 @@
   </url>
   <url>
     <loc>https://www.sahwanlaw.com/knowledge.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sahwanlaw.com/blog/force-majeure-bahrain-practitioners-framework.html</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sahwanlaw.com/ar/blog/force-majeure-bahrain-practitioners-framework.html</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
