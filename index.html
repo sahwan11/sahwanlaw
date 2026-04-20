@@ -25,7 +25,10 @@
     <link rel="alternate" hreflang="en" href="https://www.sahwanlaw.com/">
     <link rel="alternate" hreflang="ar" href="https://www.sahwanlaw.com/ar/">
     <link rel="alternate" hreflang="x-default" href="https://www.sahwanlaw.com/">
-    
+
+    <!-- Atom feed (auto-discovery for RSS readers & AI citation crawlers) -->
+    <link rel="alternate" type="application/atom+xml" title="Sahwan Law — Legal Knowledge" href="https://www.sahwanlaw.com/feed.xml">
+
     <!-- Additional SEO -->
     <meta name="robots" content="index, follow">
     <meta name="author" content="Salman A. Sahwan - Attorneys & Legal Consultants">
@@ -52,8 +55,8 @@
       "name": "Salman A. Sahwan - Attorneys & Legal Consultants",
       "alternateName": ["Sahwan Law", "SAS Law", "SAS Group"],
       "url": "https://www.sahwanlaw.com",
-      "logo": "https://www.sahwanlaw.com/logo.png",
-      "image": "https://www.sahwanlaw.com/logo.png",
+      "logo": "https://www.sahwanlaw.com/images/logo.png",
+      "image": "https://www.sahwanlaw.com/images/logo.png",
       "description": "Established in 1975, Salman A. Sahwan Attorneys & Legal Consultants is one of the leading full-service law firms in the Kingdom of Bahrain, providing corporate, commercial, litigation, notarization, and advisory services across the GCC region.",
       "foundingDate": "1975",
       "founder": {
@@ -186,20 +189,32 @@
       "employee": {
         "@type": "Person",
         "name": "Abdulla Sahwan",
-        "jobTitle": "Managing Partner & CEO",
+        "jobTitle": "Principal Partner",
         "description": "Leading the firm since 2009, Abdulla Sahwan combines traditional legal wisdom with contemporary strategies, specializing in corporate restructuring, complex litigation, and international arbitration."
       },
       "sameAs": [
         "https://www.linkedin.com/company/sahwan-law",
         "https://www.facebook.com/sahwanlaw"
       ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "reviewCount": "45",
-        "bestRating": "5",
-        "worstRating": "1"
-      }
+      "member": {
+        "@type": "Organization",
+        "name": "Bahrain Bar Society"
+      },
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Licensed by Ministry of Justice, Kingdom of Bahrain"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Official Notary of Bahrain"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "GCC Certified International Arbitrator"
+        }
+      ],
+      "knowsLanguage": ["ar", "en"]
     }
     </script>
     
@@ -218,113 +233,23 @@
       ]
     }
     </script>
-    <meta name="description" content="Salman A. Sahwan Attorneys & Legal Consultants - Full-service law firm in Bahrain since 1975. Corporate law, litigation, notarization, banking & finance, real estate across the GCC.">
-    
-    <!-- Schema.org structured data for AI and search engines -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LegalService",
-      "@id": "https://www.sahwanlaw.com/#organization",
-      "name": "Salman A. Sahwan - Attorneys & Legal Consultants",
-      "alternateName": ["Sahwan Law", "SAS Law", "SAS Group"],
-      "url": "https://www.sahwanlaw.com",
-      "logo": "https://www.sahwanlaw.com/logo.png",
-      "image": "https://www.sahwanlaw.com/office.jpg",
-      "description": "Full-service law firm providing corporate, litigation, and advisory legal services across the GCC since 1975. Specializing in Sijilat company formation, notarization, banking & finance, real estate, and owners associations.",
-      "foundingDate": "1975",
-      "founder": {
-        "@type": "Person",
-        "name": "Salman Abdulla Sahwan"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Wind Tower, Diplomatic Area",
-        "addressLocality": "Manama",
-        "addressRegion": "Capital Governorate",
-        "postalCode": "P.O. Box 5959",
-        "addressCountry": "BH"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "26.2361",
-        "longitude": "50.5860"
-      },
-      "telephone": "+973-17-531-566",
-      "email": "info@sahwanlaw.com",
-      "openingHours": "Su-Th 08:00-17:00",
-      "priceRange": "$$",
-      "currenciesAccepted": "BHD",
-      "paymentAccepted": "Cash, Bank Transfer",
-      "areaServed": [
-        {
-          "@type": "Country",
-          "name": "Bahrain"
-        },
-        {
-          "@type": "Place",
-          "name": "GCC"
-        },
-        {
-          "@type": "Country",
-          "name": "United Kingdom"
-        }
-      ],
-      "serviceType": [
-        "Corporate Law",
-        "Commercial Law",
-        "Litigation",
-        "Arbitration",
-        "Notarization",
-        "Company Formation",
-        "Sijilat Services",
-        "Banking & Finance",
-        "Real Estate Law",
-        "Construction Law",
-        "Owners Association Law",
-        "Employment Law"
-      ],
-      "knowsLanguage": ["ar", "en"],
-      "sameAs": [
-        "https://www.linkedin.com/company/sahwan-law",
-        "https://www.facebook.com/sahwanlaw"
-      ],
-      "member": {
-        "@type": "Organization",
-        "name": "Bahrain Bar Society"
-      },
-      "hasCredential": [
-        {
-          "@type": "EducationalOccupationalCredential",
-          "name": "Licensed by Ministry of Justice, Kingdom of Bahrain"
-        },
-        {
-          "@type": "EducationalOccupationalCredential", 
-          "name": "Official Notary of Bahrain"
-        },
-        {
-          "@type": "EducationalOccupationalCredential",
-          "name": "GCC Certified International Arbitrator"
-        }
-      ]
-    }
-    </script>
-
+    <!-- Attorney schema (consolidated — duplicate LegalService block removed for single canonical structured-data source) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Attorney",
       "name": "Abdulla Sahwan",
-      "jobTitle": "Managing Partner & CEO",
+      "jobTitle": "Principal Partner",
       "worksFor": {
         "@type": "LegalService",
+        "@id": "https://www.sahwanlaw.com/#organization",
         "name": "Salman A. Sahwan - Attorneys & Legal Consultants"
       },
-      "alumniOf": {
+      "memberOf": {
         "@type": "Organization",
         "name": "Bahrain Bar Society"
       },
-      "knowsAbout": ["Corporate Law", "Litigation", "Arbitration", "Real Estate Law", "Banking & Finance"],
+      "knowsAbout": ["Corporate Law", "Commercial Law", "Litigation", "Arbitration", "Real Estate Law", "Banking & Finance", "Force Majeure", "Bahraini Civil Code"],
       "knowsLanguage": ["ar", "en"]
     }
     </script>
@@ -356,6 +281,30 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Sahwan Law (Salman A. Sahwan - Attorneys & Legal Consultants) was established in 1975 by the late Salman Abdulla Sahwan, making it one of the oldest and most established law firms in Bahrain with over 50 years of legal experience."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is force majeure under Bahraini law?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Force majeure under Bahraini law is a civilian-law doctrine that exonerates a party from liability for non-performance caused by events that are external, unforeseeable, unavoidable, and causatively linked to the non-performance. All four elements must be present. It does not excuse pre-existing breaches, ordinary commercial hardship, or monetary obligations. Contracts almost invariably contain a force-majeure clause that adjusts or supplements the statutory position."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the Stalled Real Estate Settlement Committee in Bahrain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Settlement Committee for Stalled Real Estate Development Projects is a Ministry of Justice committee established under Bahrain's Settlement of Stalled Property Development Projects framework. It provides a dedicated statutory route for buyers and other claimants to submit claims arising out of delayed or halted off-plan developments, as an alternative or supplement to civil court proceedings."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Sahwan Law handle international arbitration?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Sahwan Law represents clients in international arbitration proceedings under ICC, BCDR, and ad hoc rules, as well as in related Bahraini court applications. The firm's Principal Partner is a GCC-certified international arbitrator with experience across multiple forums."
           }
         }
       ]
@@ -942,6 +891,9 @@
             </div>
             <!-- FORMSPREE CONTACT FORM -->
             <form action="https://formspree.io/f/xnjjqove" method="POST" class="space-y-8">
+              <!-- Email routing: all submissions sent to info@sahwanlaw.com -->
+              <input type="hidden" name="_cc" value="info@sahwanlaw.com">
+              <input type="hidden" name="_subject" value="New Consultation Request – Sahwan Law">
               <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="group relative">
                   <input type="text" name="name" id="name" required class="peer w-full bg-transparent border-b border-navy/20 py-3 text-navy focus:outline-none focus:border-gold transition-colors" placeholder=" ">

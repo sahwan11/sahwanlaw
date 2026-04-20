@@ -5,5 +5,8 @@ Allow: /
 # Sitemap location
 Sitemap: https://www.sahwanlaw.com/sitemap.xml
 
+# Atom feed (for syndication & AI citation crawlers)
+Sitemap: https://www.sahwanlaw.com/feed.xml
+
 # Crawl-delay (optional, be nice to servers)
 Crawl-delay: 1

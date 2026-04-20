@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <title>Sahwan Law — Legal Knowledge</title>
+  <subtitle>Commercial, corporate, and regulatory legal insights from Bahrain since 1975.</subtitle>
+  <link href="https://www.sahwanlaw.com/feed.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://www.sahwanlaw.com/knowledge.html" rel="alternate" type="text/html"/>
+  <id>https://www.sahwanlaw.com/</id>
+  <updated>2026-04-12T14:55:09Z</updated>
+  <icon>https://www.sahwanlaw.com/images/favicon-32x32.png</icon>
+  <logo>https://www.sahwanlaw.com/images/logo.png</logo>
+  <rights>© 2026 Salman A. Sahwan Attorneys &amp; Legal Consultants. All rights reserved.</rights>
+  <generator uri="https://www.sahwanlaw.com">Sahwan Law Publishing</generator>
+  <author>
+    <name>Sahwan Law</name>
+    <uri>https://www.sahwanlaw.com</uri>
+    <email>info@sahwanlaw.com</email>
+  </author>
+
+  <entry xml:lang="en">
+    <title>Force Majeure Under Bahraini Law: A Practitioner's Framework</title>
+    <link href="https://www.sahwanlaw.com/blog/force-majeure-bahrain-practitioners-framework.html" rel="alternate" type="text/html"/>
+    <id>https://www.sahwanlaw.com/blog/force-majeure-bahrain-practitioners-framework.html</id>
+    <updated>2026-04-12T00:00:00Z</updated>
+    <published>2026-04-12T00:00:00Z</published>
+    <author><name>Abdulla Sahwan</name></author>
+    <category term="commercial"/>
+    <category term="article"/>
+    <summary type="text">A practitioner's framework for force majeure under Bahraini law — the four cumulative elements, pre-existing breach, drafting considerations, invocation mechanics, regulatory touchpoints, and practical guidance for businesses.</summary>
+  </entry>
+
+  <entry xml:lang="en">
+    <title>Notarization in Bahrain: What Documents Need to be Notarized</title>
+    <link href="https://www.sahwanlaw.com/blog/notarization-bahrain.html" rel="alternate" type="text/html"/>
+    <id>https://www.sahwanlaw.com/blog/notarization-bahrain.html</id>
+    <updated>2025-12-03T00:00:00Z</updated>
+    <published>2025-12-03T00:00:00Z</published>
+    <author><name>Abdulla Sahwan</name></author>
+    <category term="notarization"/>
+    <category term="article"/>
+    <summary type="text">Complete guide to notarization in Bahrain. Learn which documents require notarization, the process, apostille requirements, and virtual notarization services.</summary>
+  </entry>
+
+  <entry xml:lang="en">
+    <title>Arbitration in Bahrain: Why Choose Arbitration Over Litigation</title>
+    <link href="https://www.sahwanlaw.com/blog/arbitration-bahrain.html" rel="alternate" type="text/html"/>
+    <id>https://www.sahwanlaw.com/blog/arbitration-bahrain.html</id>
+    <updated>2025-10-22T00:00:00Z</updated>
+    <published>2025-10-22T00:00:00Z</published>
+    <author><name>Abdulla Sahwan</name></author>
+    <category term="arbitration"/>
+    <category term="article"/>
+    <summary type="text">Guide to commercial arbitration in Bahrain. Learn the advantages of arbitration, BCDR procedures, and enforcement of awards under the New York Convention.</summary>
+  </entry>
+
+  <entry xml:lang="en">
+    <title>Debt Collection in Bahrain: Legal Process and Procedures</title>
+    <link href="https://www.sahwanlaw.com/blog/debt-collection-bahrain.html" rel="alternate" type="text/html"/>
+    <id>https://www.sahwanlaw.com/blog/debt-collection-bahrain.html</id>
+    <updated>2025-09-08T00:00:00Z</updated>
+    <published>2025-09-08T00:00:00Z</published>
+    <author><name>Abdulla Sahwan</name></author>
+    <category term="debt"/>
+    <category term="article"/>
+    <summary type="text">Complete guide to debt collection in Bahrain. Learn about demand letters, court procedures, execution orders, and bulk recovery for telecoms.</summary>
+  </entry>
+
+  <entry xml:lang="en">
+    <title>Company Registration in Bahrain: Complete Sijilat Guide 2025</title>
+    <link href="https://www.sahwanlaw.com/blog/company-registration-bahrain-sijilat.html" rel="alternate" type="text/html"/>
+    <id>https://www.sahwanlaw.com/blog/company-registration-bahrain-sijilat.html</id>
+    <updated>2025-07-15T00:00:00Z</updated>
+    <published>2025-07-15T00:00:00Z</published>
+    <author><name>Abdulla Sahwan</name></author>
+    <category term="corporate"/>
+    <category term="article"/>
+    <summary type="text">Step-by-step guide to registering a company in Bahrain through Sijilat. Learn about WLL, branch registration, documents, fees, and foreign ownership.</summary>
+  </entry>
+
+  <entry xml:lang="en">
+    <title>Major Overhaul of Cheque Regulations (Law No. 23 of 2025)</title>
+    <link href="https://www.sahwanlaw.com/blog/cheque-regulations-law-23-2025.html" rel="alternate" type="text/html"/>
+    <id>https://www.sahwanlaw.com/blog/cheque-regulations-law-23-2025.html</id>
+    <updated>2025-05-31T00:00:00Z</updated>
+    <published>2025-05-31T00:00:00Z</published>
+    <author><name>Abdulla Sahwan</name></author>
+    <category term="commercial"/>
+    <category term="update"/>
+    <summary type="text">Bahrain's Law No. (23) of 2025 significantly overhauls check regulations within its Commercial Law to bolster financial stability and commercial integrity.</summary>
+  </entry>
+
+  <entry xml:lang="en">
+    <title>The Amiable Compositeur in Bahraini Arbitration Law</title>
+    <link href="https://www.sahwanlaw.com/blog/amiable-compositeur-arbitration.html" rel="alternate" type="text/html"/>
+    <id>https://www.sahwanlaw.com/blog/amiable-compositeur-arbitration.html</id>
+    <updated>2025-05-31T00:00:00Z</updated>
+    <published>2025-05-31T00:00:00Z</published>
+    <author><name>Abdulla Sahwan</name></author>
+    <category term="arbitration"/>
+    <category term="article"/>
+    <summary type="text">The concept of the &quot;amicable compositeur&quot; allows the arbitrator to resolve disputes based on principles of justice and fairness, transcending the strict literal application of the law.</summary>
+  </entry>
+
+  <entry xml:lang="en">
+    <title>Modernizing Justice: Bahrain Expands Alternative Sentencing (Law No. 20 of 2025)</title>
+    <link href="https://www.sahwanlaw.com/blog/alternative-sentencing-law-20-2025.html" rel="alternate" type="text/html"/>
+    <id>https://www.sahwanlaw.com/blog/alternative-sentencing-law-20-2025.html</id>
+    <updated>2025-05-31T00:00:00Z</updated>
+    <published>2025-05-31T00:00:00Z</published>
+    <author><name>Abdulla Sahwan</name></author>
+    <category term="criminal"/>
+    <category term="update"/>
+    <summary type="text">Bahrain's new Law No. (20) of 2025 significantly modernizes its justice system by expanding alternative penalties to imprisonment, focusing on rehabilitation.</summary>
+  </entry>
+
+  <entry xml:lang="ar">
+    <title>دليل تأسيس الشركات في البحرين الشامل 2025</title>
+    <link href="https://www.sahwanlaw.com/ar/sijilat/" rel="alternate" type="text/html"/>
+    <id>https://www.sahwanlaw.com/ar/sijilat/</id>
+    <updated>2025-01-23T00:00:00Z</updated>
+    <published>2025-01-23T00:00:00Z</published>
+    <author><name>مكتب سهوان للمحاماة</name></author>
+    <category term="corporate"/>
+    <category term="guide"/>
+    <summary type="text">كل ما تحتاج معرفته عن تسجيل شركة في البحرين عبر نظام سجلات: الأنواع، المتطلبات، الرسوم، والخطوات التفصيلية.</summary>
+  </entry>
+
+  <entry xml:lang="ar">
+    <title>دليل التوثيق والتصديق في البحرين الشامل 2025</title>
+    <link href="https://www.sahwanlaw.com/ar/notary/" rel="alternate" type="text/html"/>
+    <id>https://www.sahwanlaw.com/ar/notary/</id>
+    <updated>2025-01-23T00:00:00Z</updated>
+    <published>2025-01-23T00:00:00Z</published>
+    <author><name>مكتب سهوان للمحاماة</name></author>
+    <category term="notarization"/>
+    <category term="guide"/>
+    <summary type="text">كل ما تحتاج معرفته عن توثيق المستندات: كاتب العدل، التصديق، الأبوستيل، التوكيلات، والإجراءات.</summary>
+  </entry>
+
+  <entry xml:lang="ar">
+    <title>دليل تحصيل الديون في البحرين الشامل 2025</title>
+    <link href="https://www.sahwanlaw.com/ar/debt-collection/" rel="alternate" type="text/html"/>
+    <id>https://www.sahwanlaw.com/ar/debt-collection/</id>
+    <updated>2025-01-23T00:00:00Z</updated>
+    <published>2025-01-23T00:00:00Z</published>
+    <author><name>مكتب سهوان للمحاماة</name></author>
+    <category term="debt"/>
+    <category term="guide"/>
+    <summary type="text">كل ما تحتاج معرفته عن استرداد الديون: الإجراءات القانونية، خطاب الإنذار، التنفيذ الجبري، والشيكات المرتجعة.</summary>
+  </entry>
+
+  <entry xml:lang="ar">
+    <title>دليل التحكيم في البحرين الشامل 2025</title>
+    <link href="https://www.sahwanlaw.com/ar/arbitration/" rel="alternate" type="text/html"/>
+    <id>https://www.sahwanlaw.com/ar/arbitration/</id>
+    <updated>2025-01-23T00:00:00Z</updated>
+    <published>2025-01-23T00:00:00Z</published>
+    <author><name>مكتب سهوان للمحاماة</name></author>
+    <category term="arbitration"/>
+    <category term="guide"/>
+    <summary type="text">كل ما تحتاج معرفته عن التحكيم التجاري: أنواع التحكيم، مركز البحرين للتحكيم، الإجراءات، وتنفيذ الأحكام.</summary>
+  </entry>
+
+  <entry xml:lang="ar">
+    <title>دليل الشركات والقانون التجاري في البحرين 2025</title>
+    <link href="https://www.sahwanlaw.com/ar/corporate/" rel="alternate" type="text/html"/>
+    <id>https://www.sahwanlaw.com/ar/corporate/</id>
+    <updated>2025-01-23T00:00:00Z</updated>
+    <published>2025-01-23T00:00:00Z</published>
+    <author><name>مكتب سهوان للمحاماة</name></author>
+    <category term="corporate"/>
+    <category term="guide"/>
+    <summary type="text">كل ما تحتاج معرفته: الاندماج والاستحواذ، العقود التجارية، حوكمة الشركات، وإعادة الهيكلة.</summary>
+  </entry>
+
+  <entry xml:lang="ar">
+    <title>دليل التقاضي والمنازعات في البحرين 2025</title>
+    <link href="https://www.sahwanlaw.com/ar/litigation/" rel="alternate" type="text/html"/>
+    <id>https://www.sahwanlaw.com/ar/litigation/</id>
+    <updated>2025-01-23T00:00:00Z</updated>
+    <published>2025-01-23T00:00:00Z</published>
+    <author><name>مكتب سهوان للمحاماة</name></author>
+    <category term="litigation"/>
+    <category term="guide"/>
+    <summary type="text">كل ما تحتاج معرفته: النظام القضائي، درجات التقاضي، إجراءات المحاكم، الاستئناف والتمييز، وتنفيذ الأحكام.</summary>
+  </entry>
+
+  <entry xml:lang="ar">
+    <title>دليل البنوك والتمويل في البحرين 2025</title>
+    <link href="https://www.sahwanlaw.com/ar/banking/" rel="alternate" type="text/html"/>
+    <id>https://www.sahwanlaw.com/ar/banking/</id>
+    <updated>2025-01-23T00:00:00Z</updated>
+    <published>2025-01-23T00:00:00Z</published>
+    <author><name>مكتب سهوان للمحاماة</name></author>
+    <category term="banking"/>
+    <category term="guide"/>
+    <summary type="text">كل ما تحتاج معرفته: التمويل الإسلامي والتقليدي، مصرف البحرين المركزي، العقود البنكية، والامتثال.</summary>
+  </entry>
+
+  <entry xml:lang="ar">
+    <title>دليل جمعيات الملاك في البحرين 2025</title>
+    <link href="https://www.sahwanlaw.com/ar/owners-associations/" rel="alternate" type="text/html"/>
+    <id>https://www.sahwanlaw.com/ar/owners-associations/</id>
+    <updated>2025-01-23T00:00:00Z</updated>
+    <published>2025-01-23T00:00:00Z</published>
+    <author><name>مكتب سهوان للمحاماة</name></author>
+    <category term="hoa"/>
+    <category term="guide"/>
+    <summary type="text">كل ما تحتاج معرفته: تأسيس الجمعية، الحوكمة، حقوق وواجبات الملاك، رسوم الخدمات، وحل النزاعات.</summary>
+  </entry>
+
+  <entry xml:lang="ar">
+    <title>دليل العقارات في البحرين 2025</title>
+    <link href="https://www.sahwanlaw.com/ar/real-estate/" rel="alternate" type="text/html"/>
+    <id>https://www.sahwanlaw.com/ar/real-estate/</id>
+    <updated>2025-01-23T00:00:00Z</updated>
+    <published>2025-01-23T00:00:00Z</published>
+    <author><name>مكتب سهوان للمحاماة</name></author>
+    <category term="realestate"/>
+    <category term="guide"/>
+    <summary type="text">كل ما تحتاج معرفته: شراء وبيع العقارات، التسجيل العقاري، عقود الإنشاءات، التطوير، والتمويل.</summary>
+  </entry>
+
+  <entry xml:lang="en">
+    <title>Corporate &amp; Commercial Law in Bahrain 2025</title>
+    <link href="https://www.sahwanlaw.com/blog/corporate-commercial-bahrain.html" rel="alternate" type="text/html"/>
+    <id>https://www.sahwanlaw.com/blog/corporate-commercial-bahrain.html</id>
+    <updated>2025-01-23T00:00:00Z</updated>
+    <published>2025-01-23T00:00:00Z</published>
+    <author><name>Abdulla Sahwan</name></author>
+    <category term="corporate"/>
+    <category term="guide"/>
+    <summary type="text">Complete guide: M&amp;A transactions, commercial contracts, corporate governance, restructuring, and regulatory compliance.</summary>
+  </entry>
+
+  <entry xml:lang="en">
+    <title>Litigation &amp; Disputes in Bahrain 2025</title>
+    <link href="https://www.sahwanlaw.com/blog/litigation-disputes-bahrain.html" rel="alternate" type="text/html"/>
+    <id>https://www.sahwanlaw.com/blog/litigation-disputes-bahrain.html</id>
+    <updated>2025-01-23T00:00:00Z</updated>
+    <published>2025-01-23T00:00:00Z</published>
+    <author><name>Abdulla Sahwan</name></author>
+    <category term="litigation"/>
+    <category term="guide"/>
+    <summary type="text">Complete guide: court system, civil and commercial cases, procedures, BCDR, appeals, cassation, and enforcement.</summary>
+  </entry>
+
+  <entry xml:lang="en">
+    <title>Banking &amp; Finance Law in Bahrain 2025</title>
+    <link href="https://www.sahwanlaw.com/blog/banking-finance-bahrain.html" rel="alternate" type="text/html"/>
+    <id>https://www.sahwanlaw.com/blog/banking-finance-bahrain.html</id>
+    <updated>2025-01-23T00:00:00Z</updated>
+    <published>2025-01-23T00:00:00Z</published>
+    <author><name>Abdulla Sahwan</name></author>
+    <category term="banking"/>
+    <category term="guide"/>
+    <summary type="text">Complete guide: CBB regulations, Islamic finance, banking licenses, AML compliance, and FinTech.</summary>
+  </entry>
+
+  <entry xml:lang="en">
+    <title>Owners' Associations in Bahrain 2025</title>
+    <link href="https://www.sahwanlaw.com/blog/owners-association-bahrain.html" rel="alternate" type="text/html"/>
+    <id>https://www.sahwanlaw.com/blog/owners-association-bahrain.html</id>
+    <updated>2025-01-23T00:00:00Z</updated>
+    <published>2025-01-23T00:00:00Z</published>
+    <author><name>Abdulla Sahwan</name></author>
+    <category term="hoa"/>
+    <category term="guide"/>
+    <summary type="text">Complete guide: establishment, governance, rights &amp; duties, service charges, RERA, and dispute resolution.</summary>
+  </entry>
+
+  <entry xml:lang="en">
+    <title>Real Estate Law in Bahrain 2025</title>
+    <link href="https://www.sahwanlaw.com/blog/real-estate-bahrain.html" rel="alternate" type="text/html"/>
+    <id>https://www.sahwanlaw.com/blog/real-estate-bahrain.html</id>
+    <updated>2025-01-23T00:00:00Z</updated>
+    <published>2025-01-23T00:00:00Z</published>
+    <author><name>Abdulla Sahwan</name></author>
+    <category term="realestate"/>
+    <category term="guide"/>
+    <summary type="text">Complete guide: buying/selling, foreign ownership, registration, off-plan, construction, and financing.</summary>
+  </entry>
+
+  <entry xml:lang="en">
+    <title>Navigating the Mechanism of Bringing in Expat Employees from Abroad</title>
+    <link href="https://www.sahwanlaw.com/blog/expat-employees-mechanism.html" rel="alternate" type="text/html"/>
+    <id>https://www.sahwanlaw.com/blog/expat-employees-mechanism.html</id>
+    <updated>2023-10-02T00:00:00Z</updated>
+    <published>2023-10-02T00:00:00Z</published>
+    <author><name>Abdulla Sahwan</name></author>
+    <category term="employment"/>
+    <category term="article"/>
+    <summary type="text">This guide walks you through the step-by-step process of hiring expat employees in Bahrain, from work permits to visa requirements.</summary>
+  </entry>
+
+</feed>
