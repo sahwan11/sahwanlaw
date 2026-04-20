@@ -1,0 +1,17 @@
+# Legal library build intermediates
+scripts/_parsed_articles.json
+scripts/_per_slug/
+scripts/_chunks/
+scripts/_*/
+scripts/_load_via_edge.py
+scripts/_*.py
+scripts/_*.sql
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db
