@@ -399,6 +399,10 @@ def render_articles(law: dict, lang: str) -> str:
     items = []
     current_chapter = None
     for a in articles:
+        # Skip synthetic "Preamble-N" rows — they capture the decree's opening recitals
+        # ("بعد الاطلاع على الدستور...") which are framing, not law articles.
+        if str(a.get("article_number") or "").startswith("Preamble-"):
+            continue
         # Chapter field in DB is Arabic only — only render on Arabic page; English page skips
         chap = a.get("chapter")
         if lang == "ar" and chap and chap != current_chapter:
@@ -406,8 +410,19 @@ def render_articles(law: dict, lang: str) -> str:
             items.append(
                 f'<h3 class="font-serif text-xl md:text-2xl text-navy mt-10 mb-4 pb-2 border-b border-gold/30 chapter-heading" {dir_attr}>{html.escape(chap)}</h3>'
             )
-        text = a.get(field_text) or ""
+        # Fall back to the Arabic text on the English page when the English text is missing.
+        # Most of our 27 laws are Arabic-only (treaties, resolutions, older laws with no
+        # official English translation). Rendering an empty <p> looks broken; showing the
+        # Arabic original with a subtle "Original Arabic text" note is the honest presentation.
+        primary = a.get(field_text) or ""
+        used_fallback = False
+        if not primary.strip() and lang == "en":
+            primary = a.get("text_ar") or ""
+            used_fallback = bool(primary.strip())
+        text = primary
         heading = a.get(field_heading) or ""
+        # On the English page, when we fall back, swap direction to RTL for the article body
+        article_dir = 'dir="rtl"' if (lang == "ar" or used_fallback) else ""
         # Normalise whitespace: the source docx has aggressive per-clause paragraph breaks,
         # which makes every subclause render on its own line. Collapse consecutive blank
         # lines to a paragraph break, single newlines to a space, and inject <br> before
@@ -423,12 +438,17 @@ def render_articles(law: dict, lang: str) -> str:
         parts = [html.escape(p).replace("&lt;br&gt;", "<br>") for p in norm.split("\u2029")]
         safe_text = "</p><p class='text-navy/80 leading-relaxed text-justify mt-3'>".join(parts)
         anchor = f"article-{html.escape(str(a['article_number'])).replace(' ', '-')}"
+        fallback_note = (
+            '<p class="text-xs text-navy/40 italic mb-1" dir="ltr">— Original Arabic text (no official English translation available) —</p>'
+            if used_fallback else ""
+        )
         items.append(f"""
-<article id="{anchor}" class="law-article border-r-2 border-gold/40 pr-4 py-3 mb-2 hover:bg-white/50 transition-colors" {dir_attr} data-num="{html.escape(str(a['article_number']))}" data-text="{html.escape(normalize_ar(text))}">
+<article id="{anchor}" class="law-article border-r-2 border-gold/40 pr-4 py-3 mb-2 hover:bg-white/50 transition-colors" {article_dir} data-num="{html.escape(str(a['article_number']))}" data-text="{html.escape(normalize_ar(text))}">
   <div class="flex items-baseline gap-3 mb-2">
     <span class="font-serif text-lg text-gold font-semibold">{label_article} {html.escape(str(a['article_number']))}</span>
     {f'<span class="text-sm text-navy/70 font-medium">{html.escape(heading)}</span>' if heading else ''}
   </div>
+  {fallback_note}
   <p class="text-navy/80 leading-relaxed text-justify">{safe_text}</p>
 </article>
 """)
@@ -522,32 +542,32 @@ def render_instrument_page(law: dict, lang: str) -> str:
         function escapeRegex(s) { return s.replace(/[.*+?^${}()|[\\]\\\\]/g, '\\\\$&'); }
 
         // Arabic normalization (mirrors server-side): equates hamza variants, ta marbuta, ya maksura; strips tashkeel+tatweel
-        function normalizeAr(s) {{
+        function normalizeAr(s) {
           if (!s) return '';
           return s
-            .replace(/[\\u064B-\\u065F\\u0670\\u0640]/g, '')       // tashkeel + tatweel
-            .replace(/[\\u0622\\u0623\\u0625]/g, '\\u0627')          // آ أ إ → ا
-            .replace(/\\u0649/g, '\\u064A')                         // ى → ي
-            .replace(/\\u0629/g, '\\u0647')                         // ة → ه
-            .replace(/\\u0624/g, '\\u0648')                         // ؤ → و
-            .replace(/\\u0626/g, '\\u064A')                         // ئ → ي
+            .replace(/[\u064B-\u065F\u0670\u0640]/g, '')       // tashkeel + tatweel
+            .replace(/[\u0622\u0623\u0625]/g, '\u0627')          // آ أ إ → ا
+            .replace(/\u0649/g, '\u064A')                         // ى → ي
+            .replace(/\u0629/g, '\u0647')                         // ة → ه
+            .replace(/\u0624/g, '\u0648')                         // ؤ → و
+            .replace(/\u0626/g, '\u064A')                         // ئ → ي
             .toLowerCase();
-        }}
+        }
 
         // Build a regex from a query that matches any equivalent Arabic variant + allows
         // optional tashkeel/tatweel between characters. For Latin/digit chars, escape literally.
-        const AR_EQUIV = {{
-          '\\u0627': '[\\u0622\\u0623\\u0625\\u0627]',   // ا
-          '\\u064A': '[\\u0649\\u064A\\u0626]',          // ي
-          '\\u0647': '[\\u0629\\u0647]',                 // ه
-          '\\u0648': '[\\u0624\\u0648]'                  // و
-        }};
-        function buildHighlightRegex(query) {{
+        const AR_EQUIV = {
+          '\u0627': '[\u0622\u0623\u0625\u0627]',   // ا
+          '\u064A': '[\u0649\u064A\u0626]',          // ي
+          '\u0647': '[\u0629\u0647]',                 // ه
+          '\u0648': '[\u0624\u0648]'                  // و
+        };
+        function buildHighlightRegex(query) {
           const nq = normalizeAr(query);
           const parts = [...nq].map(ch => AR_EQUIV[ch] || escapeRegex(ch));
           // Allow tashkeel/tatweel to appear between letters in the original text
-          return new RegExp(parts.join('[\\u064B-\\u065F\\u0670\\u0640]*'), 'gi');
-        }}
+          return new RegExp(parts.join('[\u064B-\u065F\u0670\u0640]*'), 'gi');
+        }
 
         function highlight(el, query) {
           el.innerHTML = el.dataset.originalHtml;  // always reset first

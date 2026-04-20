@@ -208,15 +208,15 @@
                 <p class="text-navy/50 text-sm font-light leading-relaxed mb-4 line-clamp-3">يُعدّ قانون التنفيذ في المواد المدنية والتجارية (الصادر بالمرسوم بقانون رقم (22) لسنة 2021) التشريعَ المستقل لإنفاذ السندات التنفيذية في مملكة البحرين. جمَع أحكامَ التنفيذ التي كانت مفرّقة في قانون المرافعات لسنة 1971…</p>
                 <span class="text-xs font-medium uppercase tracking-widest text-navy flex items-center gap-2 group-hover:gap-4 transition-all">النص الكامل <svg class="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></span>
               </a>
-              <!-- Arabic: قرار وزير العدل والشئون الإسلامية والأوقاف رقم (134) لسنة 2021 بشأن تنظيم خدمات التقاضي عن بُعد بغرفة البحرين لتسوية المنازعات الاقتصادية والمالية والاستثمارية -->
+              <!-- Arabic: قرار وزير العدل والشئون الإسلامية والأوقاف رقم (134) لسنة 2021 بإصدار لائحة إجراءات تسوية المنازعات التي تختص بها غرفة البحرين لتسوية المنازعات بموجب الفصل الأول من الباب الثاني من المرسوم بقانون رقم (30) لسنة 2009 بشأن غرفة البحرين لتسوية المنازعات الاقتصادية والمالية والاستثمارية -->
               <a href="../laws/RJIW13421.html" class="article-card group bg-white p-8 border border-navy/5 hover:border-gold/30 hover:shadow-lg transition-all duration-300" data-lang="ar" data-type="legislation" data-tag="dispute-resolution" data-date="2021-01-01">
                 <div class="flex items-center gap-2 mb-4">
                   <span class="text-[10px] uppercase tracking-widest font-bold px-2 py-1 rounded-sm bg-navy text-white">تشريع</span>
                   <span class="text-[10px] px-2 py-1 rounded-sm bg-gold/20 text-gold">تسوية المنازعات</span>
                   <span class="text-sm text-navy/40 mr-auto">2021</span>
                 </div>
-                <h2 class="font-serif text-xl text-navy mb-3 group-hover:text-gold transition-colors leading-tight">قرار وزير العدل والشئون الإسلامية والأوقاف رقم (134) لسنة 2021 بشأن تنظيم خدمات التقاضي عن بُعد بغرفة البحرين لتسوية المنازعات الاقتصادية والمالية والاستثمارية</h2>
-                <p class="text-navy/50 text-sm font-light leading-relaxed mb-4 line-clamp-3"></p>
+                <h2 class="font-serif text-xl text-navy mb-3 group-hover:text-gold transition-colors leading-tight">قرار وزير العدل والشئون الإسلامية والأوقاف رقم (134) لسنة 2021 بإصدار لائحة إجراءات تسوية المنازعات التي تختص بها غرفة البحرين لتسوية المنازعات بموجب الفصل الأول من الباب الثاني من المرسوم بقانون رقم (30) لسنة 2009 بشأن غرفة البحرين لتسوية المنازعات الاقتصادية والمالية والاستثمارية</h2>
+                <p class="text-navy/50 text-sm font-light leading-relaxed mb-4 line-clamp-3">يُصدر اللائحة الإجرائية التي تحكم المنازعات التي تنظرها غرفة البحرين لتسوية المنازعات بموجب الفصل الأول من الباب الثاني من المرسوم بقانون رقم (30) لسنة 2009. وتتضمن اللائحة المكوَّنة من (132) مادة قواعد إدارة الدعوى…</p>
                 <span class="text-xs font-medium uppercase tracking-widest text-navy flex items-center gap-2 group-hover:gap-4 transition-all">النص الكامل <svg class="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></span>
               </a>
               <!-- Arabic: قرار وزير العدل والشئون الإسلامية والأوقاف رقم (30) لسنة 2020 بإصدار لائحة الإجراءات الخاصة بالدعاوى التجارية -->
@@ -744,6 +744,11 @@
 
             </div>
 
+            <!-- Load More -->
+            <div class="mt-10 text-center">
+              <button id="loadMore" onclick="loadMore()" class="hidden bg-navy text-white text-xs uppercase tracking-widest font-bold px-8 py-3 hover:bg-gold transition-colors">عرض المزيد</button>
+            </div>
+
             <!-- No Results Message -->
             <div id="noResults" class="hidden text-center py-16">
               <p class="text-navy/40 text-lg">لا توجد مقالات تطابق الفلاتر المحددة.</p>
@@ -795,24 +800,30 @@
 
     <!-- FILTER SCRIPT -->
     <script>
-      let currentLang = 'all';
+      const PAGE_SIZE = 12;
+      const DEFAULT_LANG = 'ar';
+      let pagesLoaded = 1;
+      let currentLang = DEFAULT_LANG;
       let currentType = 'all';
       let currentTag = 'all';
 
       function filterByLang(lang) {
         currentLang = lang;
+        pagesLoaded = 1;
         updateActiveButton('lang-btn', lang);
         applyFilters();
       }
 
       function filterByType(type) {
         currentType = type;
+        pagesLoaded = 1;
         updateActiveButton('type-btn', type);
         applyFilters();
       }
 
       function filterByTag(tag) {
         currentTag = tag;
+        pagesLoaded = 1;
         updateActiveButton('tag-btn', tag);
         applyFilters();
       }
@@ -820,7 +831,7 @@
       function updateActiveButton(className, value) {
         document.querySelectorAll('.' + className).forEach(btn => {
           btn.classList.remove('active');
-          if (btn.onclick.toString().includes("'" + value + "'")) {
+          if (btn.onclick && btn.onclick.toString().includes("'" + value + "'")) {
             btn.classList.add('active');
           }
         });
@@ -828,7 +839,9 @@
 
       function applyFilters() {
         const articles = document.querySelectorAll('.article-card');
+        let matchCount = 0;
         let visibleCount = 0;
+        const maxVisible = PAGE_SIZE * pagesLoaded;
 
         articles.forEach(article => {
           const lang = article.dataset.lang;
@@ -840,33 +853,45 @@
           const tagMatch = currentTag === 'all' || tag === currentTag;
 
           if (langMatch && typeMatch && tagMatch) {
-            article.classList.remove('hidden');
-            visibleCount++;
+            matchCount++;
+            if (matchCount <= maxVisible) {
+              article.classList.remove('hidden');
+              visibleCount++;
+            } else {
+              article.classList.add('hidden');
+            }
           } else {
             article.classList.add('hidden');
           }
         });
 
-        document.getElementById('articleCount').textContent = visibleCount;
-        document.getElementById('noResults').classList.toggle('hidden', visibleCount > 0);
+        document.getElementById('articleCount').textContent = matchCount;
+        const lm = document.getElementById('loadMore');
+        if (lm) lm.classList.toggle('hidden', visibleCount >= matchCount);
+        const nr = document.getElementById('noResults');
+        if (nr) nr.classList.toggle('hidden', matchCount > 0);
       }
 
-      function clearFilters() {
-        currentLang = 'all';
-        currentType = 'all';
-        currentTag = 'all';
-        
-        document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-        document.querySelectorAll('.lang-btn')[0].classList.add('active');
-        document.querySelectorAll('.type-btn')[0].classList.add('active');
-        document.querySelectorAll('.tag-btn')[0].classList.add('active');
-        
+      function loadMore() {
+        pagesLoaded++;
         applyFilters();
       }
 
-      // Initialize count
+      function clearFilters() {
+        currentLang = DEFAULT_LANG;
+        currentType = 'all';
+        currentTag = 'all';
+        pagesLoaded = 1;
+        document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+        updateActiveButton('lang-btn', currentLang);
+        document.querySelectorAll('.type-btn')[0].classList.add('active');
+        document.querySelectorAll('.tag-btn')[0].classList.add('active');
+        applyFilters();
+      }
+
       document.addEventListener('DOMContentLoaded', () => {
-        document.getElementById('articleCount').textContent = document.querySelectorAll('.article-card').length;
+        updateActiveButton('lang-btn', DEFAULT_LANG);
+        applyFilters();
       });
     </script>
 </body>
