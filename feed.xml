@@ -5,7 +5,7 @@
   <link href="https://www.sahwanlaw.com/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://www.sahwanlaw.com/knowledge.html" rel="alternate" type="text/html"/>
   <id>https://www.sahwanlaw.com/</id>
-  <updated>2026-04-12T14:55:09Z</updated>
+  <updated>2026-04-24T15:36:48Z</updated>
   <icon>https://www.sahwanlaw.com/images/favicon-32x32.png</icon>
   <logo>https://www.sahwanlaw.com/images/logo.png</logo>
   <rights>© 2026 Salman A. Sahwan Attorneys &amp; Legal Consultants. All rights reserved.</rights>
@@ -15,6 +15,18 @@
     <uri>https://www.sahwanlaw.com</uri>
     <email>info@sahwanlaw.com</email>
   </author>
+
+  <entry xml:lang="en">
+    <title>AI Legal Slop and the Illusion of Legal Safety</title>
+    <link href="https://www.sahwanlaw.com/blog/ai-legal-slop-illusion-of-legal-safety.html" rel="alternate" type="text/html"/>
+    <id>https://www.sahwanlaw.com/blog/ai-legal-slop-illusion-of-legal-safety.html</id>
+    <updated>2026-04-24T00:00:00Z</updated>
+    <published>2026-04-24T00:00:00Z</published>
+    <author><name>Abdulla Sahwan</name></author>
+    <category term="commercial"/>
+    <category term="article"/>
+    <summary type="text">When AI produces a polished legal memo that is wrong where it matters, the real danger is the false confidence it creates. A case study from a Bahraini acquisition and five consequences for corporate practice.</summary>
+  </entry>
 
   <entry xml:lang="en">
     <title>Force Majeure Under Bahraini Law: A Practitioner's Framework</title>
@@ -290,6 +302,54 @@
     <category term="employment"/>
     <category term="article"/>
     <summary type="text">This guide walks you through the step-by-step process of hiring expat employees in Bahrain, from work permits to visa requirements.</summary>
+  </entry>
+
+  <entry xml:lang="en">
+    <title>Legislative Decree No. (54) of 2018 Promulgating the Law of Electronic Communications and Transactions</title>
+    <link href="https://www.sahwanlaw.com/laws/L5418.html" rel="alternate" type="text/html"/>
+    <id>https://www.sahwanlaw.com/laws/L5418.html</id>
+    <updated>2018-01-01T00:00:00Z</updated>
+    <published>2018-01-01T00:00:00Z</published>
+    <author><name>Abdulla Sahwan</name></author>
+    <category term="commercial"/>
+    <category term="legislation"/>
+    <summary type="text">The Electronic Communications and Transactions Law (Legislative Decree No. 54 of 2018) is Bahrain's modern e-transactions statute, replacing the older Electronic Transactions Law of 2002. Building on the UNCITRAL Model…</summary>
+  </entry>
+
+  <entry xml:lang="en">
+    <title>Legislative Decree No. (19) of 2001 Promulgating the Civil Code</title>
+    <link href="https://www.sahwanlaw.com/laws/L1901.html" rel="alternate" type="text/html"/>
+    <id>https://www.sahwanlaw.com/laws/L1901.html</id>
+    <updated>2001-01-01T00:00:00Z</updated>
+    <published>2001-01-01T00:00:00Z</published>
+    <author><name>Abdulla Sahwan</name></author>
+    <category term="civil"/>
+    <category term="legislation"/>
+    <summary type="text">The Civil Code (Legislative Decree No. 19 of 2001) is the foundational statute of private civil law in Bahrain, enacted on 1 January 2001 and commenced later that year. It replaced the 1969 Contracts Law and the 1970…</summary>
+  </entry>
+
+  <entry xml:lang="en">
+    <title>Legislative Decree No. (21) of 2001 Promulgating the Commercial Companies Law</title>
+    <link href="https://www.sahwanlaw.com/laws/L2101.html" rel="alternate" type="text/html"/>
+    <id>https://www.sahwanlaw.com/laws/L2101.html</id>
+    <updated>2001-01-01T00:00:00Z</updated>
+    <published>2001-01-01T00:00:00Z</published>
+    <author><name>Abdulla Sahwan</name></author>
+    <category term="corporate"/>
+    <category term="legislation"/>
+    <summary type="text">The Commercial Companies Law (Legislative Decree No. 21 of 2001) is Bahrain's primary corporate statute, governing the formation, governance, capital, accounts, and dissolution of commercial companies incorporated in…</summary>
+  </entry>
+
+  <entry xml:lang="en">
+    <title>Legislative Decree No. (7) of 1987 Promulgating the Law of Commerce</title>
+    <link href="https://www.sahwanlaw.com/laws/L0787.html" rel="alternate" type="text/html"/>
+    <id>https://www.sahwanlaw.com/laws/L0787.html</id>
+    <updated>1987-01-01T00:00:00Z</updated>
+    <published>1987-01-01T00:00:00Z</published>
+    <author><name>Abdulla Sahwan</name></author>
+    <category term="commercial"/>
+    <category term="legislation"/>
+    <summary type="text">The Code of Commerce (Legislative Decree No. 7 of 1987) is the core merchant-law statute of Bahrain, sitting alongside (and largely independent of) the general Civil Code (DL 19/2001). It applies to traders (whether…</summary>
   </entry>
 
 </feed>
