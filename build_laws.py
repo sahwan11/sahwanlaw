@@ -50,12 +50,8 @@ def normalize_ar(s: str) -> str:
     return s.lower()
 
 REPO_ROOT = Path(__file__).resolve().parent
-SUPABASE_URL = "https://tabrszajayygskcecjvm.supabase.co"
-SUPABASE_ANON = (
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
-    ".eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRhYnJzemFqYXl5Z3NrY2VjanZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQwMTgyMzAsImV4cCI6MjA4OTU5NDIzMH0"
-    ".HiVArtnFAMTNqyEPjQUnKS83lBkE-2LTBNfQjLGKA1k"
-)
+SUPABASE_URL = "https://suputmhjsiqjokgpwepw.supabase.co"
+SUPABASE_ANON = "sb_publishable_5Iyk_Al1u8mTlPRc3cHb3A_-DzP3YP3"
 
 DISCLAIMER_EN = (
     "This library is a working reference compiled by Sahwan Law from publicly-"
